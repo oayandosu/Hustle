@@ -1,0 +1,11 @@
+
+PODS:
+- ViewDeck (2.2.4)
+
+DEPENDENCIES:
+- ViewDeck
+
+SPEC CHECKSUMS:
+  ViewDeck: 995e4b8ee14382163461fa0a4ad8b607e4882cc6
+
+COCOAPODS: 0.16.4
