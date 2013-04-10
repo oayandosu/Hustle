@@ -1,6 +1,6 @@
 # Hustle
 
-Example iOS development project in the form of a Dribbble client.
+Example iOS development project in the form of a Dribbble client. This project can be used as a bootstrap for you next iOS app or for example code. There is also a presentation deck in the project that will break down the iterations taken to build Hustle. Follow along in the presentation or on my blog at http://cargocultblog.com
 
 # Project goals
 
