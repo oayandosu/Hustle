@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22603EA4AB654DAA85BD74D6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C4478F2FEC9448994F80898 /* libPods.a */; };
+		2713DB0E17161F2C00ED8209 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2713DB0D17161F2C00ED8209 /* icon.png */; };
+		2713DB1017161F2F00ED8209 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2713DB0F17161F2F00ED8209 /* icon@2x.png */; };
 		27AB075F1716183400FB2D8C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27AB075E1716183400FB2D8C /* UIKit.framework */; };
 		27AB07611716183400FB2D8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27AB07601716183400FB2D8C /* Foundation.framework */; };
 		27AB07631716183400FB2D8C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27AB07621716183400FB2D8C /* CoreGraphics.framework */; };
@@ -19,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2713DB0D17161F2C00ED8209 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		2713DB0F17161F2F00ED8209 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		27AB075B1716183400FB2D8C /* Hustle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hustle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27AB075E1716183400FB2D8C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		27AB07601716183400FB2D8C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -32,6 +37,8 @@
 		27AB07701716183400FB2D8C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		27AB07721716183400FB2D8C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		27AB07741716183400FB2D8C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		4C4478F2FEC9448994F80898 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9799FAEA99FA44A6913D995D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,18 +49,50 @@
 				27AB075F1716183400FB2D8C /* UIKit.framework in Frameworks */,
 				27AB07611716183400FB2D8C /* Foundation.framework in Frameworks */,
 				27AB07631716183400FB2D8C /* CoreGraphics.framework in Frameworks */,
+				22603EA4AB654DAA85BD74D6 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2713DB111716209B00ED8209 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		2713DB12171620A000ED8209 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		2713DB13171620A400ED8209 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		2713DB14171620A800ED8209 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		27AB07521716183400FB2D8C = {
 			isa = PBXGroup;
 			children = (
+				2713DB0F17161F2F00ED8209 /* icon@2x.png */,
+				2713DB0D17161F2C00ED8209 /* icon.png */,
 				27AB07641716183400FB2D8C /* Hustle */,
 				27AB075D1716183400FB2D8C /* Frameworks */,
 				27AB075C1716183400FB2D8C /* Products */,
+				9799FAEA99FA44A6913D995D /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +110,7 @@
 				27AB075E1716183400FB2D8C /* UIKit.framework */,
 				27AB07601716183400FB2D8C /* Foundation.framework */,
 				27AB07621716183400FB2D8C /* CoreGraphics.framework */,
+				4C4478F2FEC9448994F80898 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -78,6 +118,10 @@
 		27AB07641716183400FB2D8C /* Hustle */ = {
 			isa = PBXGroup;
 			children = (
+				2713DB14171620A800ED8209 /* Helpers */,
+				2713DB111716209B00ED8209 /* Models */,
+				2713DB12171620A000ED8209 /* Views */,
+				2713DB13171620A400ED8209 /* Controllers */,
 				27AB076D1716183400FB2D8C /* AppDelegate.h */,
 				27AB076E1716183400FB2D8C /* AppDelegate.m */,
 				27AB07651716183400FB2D8C /* Supporting Files */,
@@ -106,9 +150,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27AB07781716183400FB2D8C /* Build configuration list for PBXNativeTarget "Hustle" */;
 			buildPhases = (
+				46EA136DDB824A858699E5FD /* Check Pods Manifest.lock */,
 				27AB07571716183400FB2D8C /* Sources */,
 				27AB07581716183400FB2D8C /* Frameworks */,
 				27AB07591716183400FB2D8C /* Resources */,
+				6E614AC6E2A74EBAA1A80DC1 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -154,10 +200,43 @@
 				27AB07711716183400FB2D8C /* Default.png in Resources */,
 				27AB07731716183400FB2D8C /* Default@2x.png in Resources */,
 				27AB07751716183400FB2D8C /* Default-568h@2x.png in Resources */,
+				2713DB0E17161F2C00ED8209 /* icon.png in Resources */,
+				2713DB1017161F2F00ED8209 /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		46EA136DDB824A858699E5FD /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sanbox is not in sync with the Podfile.lock. Run 'pod install'.\nEOM\n    exit 1\nfi\n";
+		};
+		6E614AC6E2A74EBAA1A80DC1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		27AB07571716183400FB2D8C /* Sources */ = {
@@ -241,10 +320,12 @@
 		};
 		27AB07791716183400FB2D8C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9799FAEA99FA44A6913D995D /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hustle/Hustle-Prefix.pch";
 				INFOPLIST_FILE = "Hustle/Hustle-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -252,10 +333,12 @@
 		};
 		27AB077A1716183400FB2D8C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9799FAEA99FA44A6913D995D /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hustle/Hustle-Prefix.pch";
 				INFOPLIST_FILE = "Hustle/Hustle-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -280,6 +363,7 @@
 				27AB077A1716183400FB2D8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

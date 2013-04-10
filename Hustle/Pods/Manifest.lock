@@ -1,0 +1,16 @@
+PODS:
+  - AFNetworking (1.2.0)
+  - MBProgressHUD (0.6)
+  - SSPullToRefresh (1.1.1)
+
+DEPENDENCIES:
+  - AFNetworking
+  - MBProgressHUD
+  - SSPullToRefresh
+
+SPEC CHECKSUMS:
+  AFNetworking: 3cbae45f61a9f995cdbd56bd571223910d7f4e44
+  MBProgressHUD: 9b55a90566fb5d07df0602f6fd9fa04510ad5d52
+  SSPullToRefresh: a0ff1db3adb47b8ad60c2e71ed4d60f4199224b1
+
+COCOAPODS: 0.18.1
