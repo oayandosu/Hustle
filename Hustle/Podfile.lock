@@ -2,15 +2,18 @@ PODS:
   - AFNetworking (1.2.0)
   - MBProgressHUD (0.6)
   - SSPullToRefresh (1.1.1)
+  - ViewDeck (2.2.8)
 
 DEPENDENCIES:
   - AFNetworking
   - MBProgressHUD
   - SSPullToRefresh
+  - ViewDeck
 
 SPEC CHECKSUMS:
   AFNetworking: 3cbae45f61a9f995cdbd56bd571223910d7f4e44
   MBProgressHUD: 9b55a90566fb5d07df0602f6fd9fa04510ad5d52
   SSPullToRefresh: a0ff1db3adb47b8ad60c2e71ed4d60f4199224b1
+  ViewDeck: 88a19cc246ece99d1aa9a883008e26c0d9068b5d
 
 COCOAPODS: 0.18.1

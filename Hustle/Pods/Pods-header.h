@@ -4,3 +4,4 @@
 #define __POD_AFNetworking
 #define __POD_MBProgressHUD
 #define __POD_SSPullToRefresh
+#define __POD_ViewDeck

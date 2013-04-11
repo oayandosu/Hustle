@@ -10,6 +10,10 @@
 		22603EA4AB654DAA85BD74D6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C4478F2FEC9448994F80898 /* libPods.a */; };
 		2713DB0E17161F2C00ED8209 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2713DB0D17161F2C00ED8209 /* icon.png */; };
 		2713DB1017161F2F00ED8209 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2713DB0F17161F2F00ED8209 /* icon@2x.png */; };
+		278A67B717162CE4004621E2 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 278A67B617162CE4004621E2 /* MainStoryboard.storyboard */; };
+		278A67BA1716361B004621E2 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 278A67B91716361B004621E2 /* MainViewController.m */; };
+		278A67BD17163632004621E2 /* NavigationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 278A67BC17163632004621E2 /* NavigationTableViewController.m */; };
+		278A67C017163644004621E2 /* FeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 278A67BF17163644004621E2 /* FeedTableViewController.m */; };
 		27AB075F1716183400FB2D8C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27AB075E1716183400FB2D8C /* UIKit.framework */; };
 		27AB07611716183400FB2D8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27AB07601716183400FB2D8C /* Foundation.framework */; };
 		27AB07631716183400FB2D8C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27AB07621716183400FB2D8C /* CoreGraphics.framework */; };
@@ -22,8 +26,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		271041D61716394E006096A6 /* MasterSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterSettings.h; sourceTree = "<group>"; };
 		2713DB0D17161F2C00ED8209 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		2713DB0F17161F2F00ED8209 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		278A67B617162CE4004621E2 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		278A67B81716361B004621E2 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		278A67B91716361B004621E2 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		278A67BB17163632004621E2 /* NavigationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationTableViewController.h; sourceTree = "<group>"; };
+		278A67BC17163632004621E2 /* NavigationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationTableViewController.m; sourceTree = "<group>"; };
+		278A67BE17163644004621E2 /* FeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewController.h; sourceTree = "<group>"; };
+		278A67BF17163644004621E2 /* FeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewController.m; sourceTree = "<group>"; };
 		27AB075B1716183400FB2D8C /* Hustle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hustle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27AB075E1716183400FB2D8C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		27AB07601716183400FB2D8C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -66,6 +78,7 @@
 		2713DB12171620A000ED8209 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				278A67B617162CE4004621E2 /* MainStoryboard.storyboard */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -73,6 +86,12 @@
 		2713DB13171620A400ED8209 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				278A67B81716361B004621E2 /* MainViewController.h */,
+				278A67B91716361B004621E2 /* MainViewController.m */,
+				278A67BB17163632004621E2 /* NavigationTableViewController.h */,
+				278A67BC17163632004621E2 /* NavigationTableViewController.m */,
+				278A67BE17163644004621E2 /* FeedTableViewController.h */,
+				278A67BF17163644004621E2 /* FeedTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -124,6 +143,7 @@
 				2713DB13171620A400ED8209 /* Controllers */,
 				27AB076D1716183400FB2D8C /* AppDelegate.h */,
 				27AB076E1716183400FB2D8C /* AppDelegate.m */,
+				271041D61716394E006096A6 /* MasterSettings.h */,
 				27AB07651716183400FB2D8C /* Supporting Files */,
 			);
 			path = Hustle;
@@ -202,6 +222,7 @@
 				27AB07751716183400FB2D8C /* Default-568h@2x.png in Resources */,
 				2713DB0E17161F2C00ED8209 /* icon.png in Resources */,
 				2713DB1017161F2F00ED8209 /* icon@2x.png in Resources */,
+				278A67B717162CE4004621E2 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +266,9 @@
 			files = (
 				27AB076B1716183400FB2D8C /* main.m in Sources */,
 				27AB076F1716183400FB2D8C /* AppDelegate.m in Sources */,
+				278A67BA1716361B004621E2 /* MainViewController.m in Sources */,
+				278A67BD17163632004621E2 /* NavigationTableViewController.m in Sources */,
+				278A67C017163644004621E2 /* FeedTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

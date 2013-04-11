@@ -1,5 +1,6 @@
 platform :ios, '6.0'
 
+pod 'ViewDeck'
 pod 'AFNetworking'
 pod 'SSPullToRefresh'
 pod 'MBProgressHUD'
