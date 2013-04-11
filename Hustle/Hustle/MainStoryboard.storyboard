@@ -38,7 +38,14 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" id="YPv-Gf-sW5"/>
+                    <navigationItem key="navigationItem" id="YPv-Gf-sW5">
+                        <barButtonItem key="leftBarButtonItem" image="button_sidebar.png" id="XVu-Mz-ycr">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="toggleSidebar:" destination="DwL-9r-n0r" id="Gb2-Ht-EPb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QWi-uY-Rjj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -155,9 +162,15 @@
             <point key="canvasLocation" x="941" y="549"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="button_sidebar.png" width="22" height="22"/>
+    </resources>
     <classes>
         <class className="FeedTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FeedTableViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="toggleSidebar:"/>
+            </relationships>
         </class>
         <class className="IIViewDeckController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/IIViewDeckController.h"/>

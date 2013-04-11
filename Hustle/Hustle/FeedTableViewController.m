@@ -11,22 +11,25 @@
 
 #pragma mark - Feed Loader
 - (void)loadFeed:(FeedType)feed {
+    UIImage* titleImage;
     switch (feed) {
         case kFeedType_Popular:
-            self.title = @"Popular";
+            titleImage = [UIImage imageNamed:@"title_popular"];
             break;
         case kFeedType_Everyone:
-            self.title = @"Everyone";
+            titleImage = [UIImage imageNamed:@"title_everyone"];
             break;
         case kFeedType_Debuts:
-            self.title = @"Debuts";
+            titleImage = [UIImage imageNamed:@"title_debuts"];
             break;
         case kFeedType_Playoffs:
-            self.title = @"Playoffs";
+            titleImage = [UIImage imageNamed:@"title_playoffs"];
             break;
         default:
             break;
     }
+    
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:titleImage];
     [self reloadData];
 }
 
