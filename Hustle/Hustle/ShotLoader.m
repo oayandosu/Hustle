@@ -17,12 +17,13 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         
-        Shot* shot = [Shot new];
-        shot.player_name = @"adsffads";
+        NSMutableArray* shots = [NSMutableArray array];
+        for (NSDictionary* data in [JSON objectForKey:@"shots"]) {
+            Shot* shot = [Shot objectWithDictionary:data];
+            [shots addObject:shot];
+        }
         
-        NSArray* items = @[ shot ];
-        
-        completion(NO, items);
+        completion(NO, [NSArray arrayWithArray:shots]);
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         completion(YES, nil);
     }];

@@ -28,12 +28,12 @@ describe(@"ShotLoader", ^{
         
         it(@"a Shot should have information needed for display", ^{
             [[expectFutureValue(((Shot*)[shots objectAtIndex:0]).title) shouldEventually] beNonNil];
-            [[expectFutureValue(((Shot*)[shots objectAtIndex:0]).image_url) shouldEventually] beNonNil];
-            [[expectFutureValue(((Shot*)[shots objectAtIndex:0]).views_count) shouldEventually] beNonNil];
-            [[expectFutureValue(((Shot*)[shots objectAtIndex:0]).comments_count) shouldEventually] beNonNil];
-            [[expectFutureValue(((Shot*)[shots objectAtIndex:0]).rebounds_count) shouldEventually] beNonNil];
-//            [[expectFutureValue(((Shot*)[shots objectAtIndex:0]).player_name) shouldEventually] beNonNil];
-//            [[expectFutureValue(((Shot*)[shots objectAtIndex:0]).player_avatar_url) shouldEventually] beNonNil];
+            [[expectFutureValue(((Shot*)[shots objectAtIndex:0]).imageUrl) shouldEventually] beNonNil];
+            [[expectFutureValue(((Shot*)[shots objectAtIndex:0]).viewsCount) shouldEventually] beNonNil];
+            [[expectFutureValue(((Shot*)[shots objectAtIndex:0]).commentsCount) shouldEventually] beNonNil];
+            [[expectFutureValue(((Shot*)[shots objectAtIndex:0]).reboundsCount) shouldEventually] beNonNil];
+            [[expectFutureValue(((Shot*)[shots objectAtIndex:0]).player_name) shouldEventually] beNonNil];
+            [[expectFutureValue(((Shot*)[shots objectAtIndex:0]).player_avatar_url) shouldEventually] beNonNil];
         });
     });
 });
