@@ -5,11 +5,18 @@
 
 
 @implementation FeedTableViewController {
+    SSPullToRefreshView* _pullToRefreshView;
     NSArray* _items;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // SSPullToRefresh needs us to tell it a view - customize here if you want something unique
+    _pullToRefreshView = [[SSPullToRefreshView alloc] initWithScrollView:self.tableView
+                                                                delegate:self];
+    // lets use the simple content view
+    _pullToRefreshView.contentView = [[SSPullToRefreshSimpleContentView alloc] init];
     
     [SVProgressHUD show];
     [self reloadData];
@@ -23,7 +30,13 @@
         _items = items;
         [self.tableView reloadData];
         [SVProgressHUD dismiss];
+        [_pullToRefreshView finishLoading];
     }];
+}
+
+#pragma mark - SSPullToRefresh Delegate
+- (void)pullToRefreshViewDidStartLoading:(SSPullToRefreshView *)view {
+    [self reloadData];
 }
 
 #pragma mark - Actions
