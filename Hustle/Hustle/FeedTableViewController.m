@@ -14,7 +14,7 @@
 
 #pragma mark - Data Loading
 - (void)reloadData {
-    [_shotLoader loadDataWithResponse:^(BOOL error, NSArray *items) {
+    [_shotLoader loadDataWithCompletion:^(BOOL error, NSArray *items) {
         // TODO: handle error case
         
         _items = items;

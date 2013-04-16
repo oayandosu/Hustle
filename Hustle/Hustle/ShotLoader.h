@@ -8,12 +8,18 @@ typedef enum {
     kFeedType_Playoffs
 } FeedType;
 
-typedef void(^Response)(BOOL error, NSArray* items);
+typedef void(^Completion)(BOOL error, NSArray* items);
 
 @interface ShotLoader : NSObject
 
 - (id)initWithType:(FeedType)type;
 
-- (void)loadDataWithResponse:(Response)response;
-
+- (void)loadDataWithCompletion:(Completion)completion;
+    
 @end
+
+
+
+
+
+

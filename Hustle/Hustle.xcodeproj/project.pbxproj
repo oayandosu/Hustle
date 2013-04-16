@@ -27,6 +27,9 @@
 		278A67BD17163632004621E2 /* NavigationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 278A67BC17163632004621E2 /* NavigationTableViewController.m */; };
 		278A67C017163644004621E2 /* FeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 278A67BF17163644004621E2 /* FeedTableViewController.m */; };
 		279033D9171D0A3B009AC4CD /* ShotLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 279033D8171D0A3B009AC4CD /* ShotLoader.m */; };
+		279033DC171D157E009AC4CD /* Shot.m in Sources */ = {isa = PBXBuildFile; fileRef = 279033DB171D157E009AC4CD /* Shot.m */; };
+		279033DF171D1E12009AC4CD /* JSONObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 279033DE171D1E12009AC4CD /* JSONObject.m */; };
+		279033E3171D1E51009AC4CD /* NSString+NamingConventions.m in Sources */ = {isa = PBXBuildFile; fileRef = 279033E2171D1E51009AC4CD /* NSString+NamingConventions.m */; };
 		27AB075F1716183400FB2D8C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27AB075E1716183400FB2D8C /* UIKit.framework */; };
 		27AB07611716183400FB2D8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27AB07601716183400FB2D8C /* Foundation.framework */; };
 		27AB07631716183400FB2D8C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27AB07621716183400FB2D8C /* CoreGraphics.framework */; };
@@ -65,6 +68,12 @@
 		278A67BF17163644004621E2 /* FeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewController.m; sourceTree = "<group>"; };
 		279033D7171D0A3B009AC4CD /* ShotLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShotLoader.h; sourceTree = "<group>"; };
 		279033D8171D0A3B009AC4CD /* ShotLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShotLoader.m; sourceTree = "<group>"; };
+		279033DA171D157E009AC4CD /* Shot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shot.h; sourceTree = "<group>"; };
+		279033DB171D157E009AC4CD /* Shot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shot.m; sourceTree = "<group>"; };
+		279033DD171D1E12009AC4CD /* JSONObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONObject.h; sourceTree = "<group>"; };
+		279033DE171D1E12009AC4CD /* JSONObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONObject.m; sourceTree = "<group>"; };
+		279033E1171D1E51009AC4CD /* NSString+NamingConventions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NamingConventions.h"; sourceTree = "<group>"; };
+		279033E2171D1E51009AC4CD /* NSString+NamingConventions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NamingConventions.m"; sourceTree = "<group>"; };
 		27AB075B1716183400FB2D8C /* Hustle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hustle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27AB075E1716183400FB2D8C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		27AB07601716183400FB2D8C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -127,6 +136,8 @@
 		2713DB111716209B00ED8209 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				279033DA171D157E009AC4CD /* Shot.h */,
+				279033DB171D157E009AC4CD /* Shot.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -155,6 +166,10 @@
 		2713DB14171620A800ED8209 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				279033DD171D1E12009AC4CD /* JSONObject.h */,
+				279033DE171D1E12009AC4CD /* JSONObject.m */,
+				279033E1171D1E51009AC4CD /* NSString+NamingConventions.h */,
+				279033E2171D1E51009AC4CD /* NSString+NamingConventions.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -447,6 +462,9 @@
 				278A67BD17163632004621E2 /* NavigationTableViewController.m in Sources */,
 				278A67C017163644004621E2 /* FeedTableViewController.m in Sources */,
 				279033D9171D0A3B009AC4CD /* ShotLoader.m in Sources */,
+				279033DC171D157E009AC4CD /* Shot.m in Sources */,
+				279033DF171D1E12009AC4CD /* JSONObject.m in Sources */,
+				279033E3171D1E51009AC4CD /* NSString+NamingConventions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
