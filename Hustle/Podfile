@@ -3,4 +3,8 @@ platform :ios, '6.0'
 pod 'ViewDeck'
 pod 'AFNetworking'
 pod 'SSPullToRefresh'
-pod 'MBProgressHUD'
+pod 'SVProgressHUD'
+
+target :HustleTests, :exclusive => true do
+   pod 'Kiwi'
+end
