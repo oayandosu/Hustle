@@ -1,16 +1,11 @@
 #import <UIKit/UIKit.h>
+#import "ShotLoader.h"
 
-
-typedef enum {
-    kFeedType_Popular,
-    kFeedType_Everyone,
-    kFeedType_Debuts,
-    kFeedType_Playoffs
-} FeedType;
 
 @interface FeedTableViewController : UITableViewController
 
-- (void)loadFeed:(FeedType)feed;
+@property (nonatomic, retain) ShotLoader* shotLoader;
+
 - (IBAction)toggleSidebar:(id)sender;
 
 @end

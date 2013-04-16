@@ -26,6 +26,7 @@
 		278A67BA1716361B004621E2 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 278A67B91716361B004621E2 /* MainViewController.m */; };
 		278A67BD17163632004621E2 /* NavigationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 278A67BC17163632004621E2 /* NavigationTableViewController.m */; };
 		278A67C017163644004621E2 /* FeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 278A67BF17163644004621E2 /* FeedTableViewController.m */; };
+		279033D9171D0A3B009AC4CD /* ShotLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 279033D8171D0A3B009AC4CD /* ShotLoader.m */; };
 		27AB075F1716183400FB2D8C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27AB075E1716183400FB2D8C /* UIKit.framework */; };
 		27AB07611716183400FB2D8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27AB07601716183400FB2D8C /* Foundation.framework */; };
 		27AB07631716183400FB2D8C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27AB07621716183400FB2D8C /* CoreGraphics.framework */; };
@@ -62,6 +63,8 @@
 		278A67BC17163632004621E2 /* NavigationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationTableViewController.m; sourceTree = "<group>"; };
 		278A67BE17163644004621E2 /* FeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewController.h; sourceTree = "<group>"; };
 		278A67BF17163644004621E2 /* FeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewController.m; sourceTree = "<group>"; };
+		279033D7171D0A3B009AC4CD /* ShotLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShotLoader.h; sourceTree = "<group>"; };
+		279033D8171D0A3B009AC4CD /* ShotLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShotLoader.m; sourceTree = "<group>"; };
 		27AB075B1716183400FB2D8C /* Hustle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hustle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27AB075E1716183400FB2D8C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		27AB07601716183400FB2D8C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -175,6 +178,15 @@
 			path = HustleTests;
 			sourceTree = "<group>";
 		};
+		279033D6171D08A4009AC4CD /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				279033D7171D0A3B009AC4CD /* ShotLoader.h */,
+				279033D8171D0A3B009AC4CD /* ShotLoader.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
 		27AB07521716183400FB2D8C = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				2713DB14171620A800ED8209 /* Helpers */,
+				279033D6171D08A4009AC4CD /* Core */,
 				2713DB111716209B00ED8209 /* Models */,
 				2713DB12171620A000ED8209 /* Views */,
 				2713DB13171620A400ED8209 /* Controllers */,
@@ -433,6 +446,7 @@
 				278A67BA1716361B004621E2 /* MainViewController.m in Sources */,
 				278A67BD17163632004621E2 /* NavigationTableViewController.m in Sources */,
 				278A67C017163644004621E2 /* FeedTableViewController.m in Sources */,
+				279033D9171D0A3B009AC4CD /* ShotLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

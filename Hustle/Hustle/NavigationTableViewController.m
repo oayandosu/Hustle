@@ -1,6 +1,7 @@
 #import "NavigationTableViewController.h"
 #import "IIViewDeckController.h"
 #import "FeedTableViewController.h"
+#import "ShotLoader.h"
 
 
 @implementation NavigationTableViewController {
@@ -48,8 +49,26 @@
 
     UINavigationController* navC = (UINavigationController*)[storyboard instantiateViewControllerWithIdentifier:@"feed"];
     FeedTableViewController* feedVC = (FeedTableViewController*)[navC.viewControllers objectAtIndex:0];
-    [feedVC loadFeed:feed];
-
+    feedVC.shotLoader = [[ShotLoader alloc] initWithType:feed];
+    UIImage* titleImage;
+    switch (feed) {
+        case kFeedType_Popular:
+            titleImage = [UIImage imageNamed:@"title_popular"];
+            break;
+        case kFeedType_Everyone:
+            titleImage = [UIImage imageNamed:@"title_everyone"];
+            break;
+        case kFeedType_Debuts:
+            titleImage = [UIImage imageNamed:@"title_debuts"];
+            break;
+        case kFeedType_Playoffs:
+            titleImage = [UIImage imageNamed:@"title_playoffs"];
+            break;
+        default:
+            break;
+    }
+    feedVC.navigationItem.titleView = [[UIImageView alloc] initWithImage:titleImage];
+    
     self.viewDeckController.centerController = navC;
     [self.viewDeckController closeLeftView];
 }
