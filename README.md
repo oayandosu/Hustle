@@ -9,7 +9,10 @@ Example iOS development project in the form of a Dribbble client. This project c
 - Have a sandbox project to try some interesting things I can't do in a production app.
 
 # Demo video & Screenshots
-(TODO: provide these when project is complete)
+
+[![ScreenShot](https://raw.github.com/kylestew/Hustle/screenshot1.png)]
+[![ScreenShot](https://raw.github.com/kylestew/Hustle/screenshot2.png)]
+Check out a demo video at https://vimeo.com/64255387
 
 # Credits
 
