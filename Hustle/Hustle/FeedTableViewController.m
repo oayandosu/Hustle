@@ -12,6 +12,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // Set the background texture - sadly can't do this in the storyboard
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed: @"feed_background"]];
+    
     // SSPullToRefresh needs us to tell it a view - customize here if you want something unique
     _pullToRefreshView = [[SSPullToRefreshView alloc] initWithScrollView:self.tableView
                                                                 delegate:self];
@@ -53,7 +56,7 @@
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
     Shot* shot = [_items objectAtIndex:indexPath.row];
-    cell.textLabel.text = shot.title;
+//    cell.textLabel.text = shot.title;
     
     return cell;
 }
