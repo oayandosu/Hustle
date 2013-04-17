@@ -10,8 +10,8 @@ Example iOS development project in the form of a Dribbble client. This project c
 
 # Demo video & Screenshots
 
-[![ScreenShot](https://raw.github.com/kylestew/blob/master/Hustle/screenshot1.png)]
-[![ScreenShot](https://raw.github.com/kylestew/blob/master/Hustle/screenshot2.png)]
+[![ScreenShot](https://raw.github.com/kylestew/Hustle/blob/master/screenshot1.png)]
+[![ScreenShot](https://raw.github.com/kylestew/Hustle/blob/master/screenshot2.png)]
 Check out a demo video at https://vimeo.com/64255387
 
 # Credits
