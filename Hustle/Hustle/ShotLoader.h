@@ -7,13 +7,16 @@ typedef enum {
     kFeedType_Debuts,
 } FeedType;
 
-typedef void(^Completion)(BOOL error, NSArray* items);
+typedef void(^Completion)(BOOL error);
 
 @interface ShotLoader : NSObject
 
-- (id)initWithType:(FeedType)type;
+@property (nonatomic, strong) NSMutableArray* shots;
+@property (nonatomic, readonly) BOOL hasMorePages;
 
-- (void)loadDataWithCompletion:(Completion)completion;
+- (id)initWithType:(FeedType)type;
+- (void)reloadDataWithCompletion:(Completion)completion;
+- (void)fetchNextPageWithCompletion:(Completion)completion;
     
 @end
 

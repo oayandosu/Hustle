@@ -8,6 +8,8 @@
 
 @implementation ShotLoader {
     NSString* _feedEndpoint;
+    int _currentPage;
+    int _totalPages;
 }
 
 - (id)initWithType:(FeedType)type {
@@ -28,20 +30,38 @@
     return self;
 }
 
+- (void)reloadDataWithCompletion:(Completion)completion {
+    _currentPage = 1;
+    _hasMorePages = NO;
+    _shots = [NSMutableArray array];
+    [self loadDataWithCompletion:completion];
+}
+
+- (void)fetchNextPageWithCompletion:(Completion)completion {
+    _currentPage++;
+    [self loadDataWithCompletion:completion];
+}
+
 - (void)loadDataWithCompletion:(Completion)completion {
-    NSURL *url = [NSURL URLWithString:_feedEndpoint];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@?page=%u", _feedEndpoint, _currentPage]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         
-        NSMutableArray* shots = [NSMutableArray array];
+        // where are we in the # of pages?
+        _totalPages = [[JSON objectForKey:@"pages"] intValue];
+        _hasMorePages = _currentPage < _totalPages;
+        
         for (NSDictionary* data in [JSON objectForKey:@"shots"]) {
             Shot* shot = [Shot objectWithDictionary:data];
-            [shots addObject:shot];
+            // don't add the same Shot object in twice
+            // Why? in a feed thats constantly changing, rows might be pushed around to other pages
+            if (![_shots containsObject:shot])
+                [_shots addObject:shot];
         }
-        
-        completion(NO, [NSArray arrayWithArray:shots]);
+       
+        completion(NO);
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-        completion(YES, nil);
+        completion(YES);
     }];
     [operation start];
 }

@@ -3,6 +3,7 @@
 
 @interface Shot : JSONObject
 
+@property (nonatomic, retain) NSString* shotId;
 @property (nonatomic, retain) NSString* title;
 @property (nonatomic, retain) NSString* imageUrl;
 @property (nonatomic, retain) NSNumber* viewsCount;

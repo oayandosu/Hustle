@@ -7,7 +7,6 @@
 
 @implementation FeedTableViewController {
     SSPullToRefreshView* _pullToRefreshView;
-    NSArray* _items;
 }
 
 - (void)viewDidLoad {
@@ -28,10 +27,9 @@
 
 #pragma mark - Data Loading
 - (void)reloadData {
-    [_shotLoader loadDataWithCompletion:^(BOOL error, NSArray *items) {
+    [_shotLoader reloadDataWithCompletion:^(BOOL error) {
         // TODO: handle error case
         
-        _items = items;
         [self.tableView reloadData];
         [SVProgressHUD dismiss];
         [_pullToRefreshView finishLoading];
@@ -50,16 +48,33 @@
 
 #pragma mark - TableView Data Source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [_items count];
+    int count = _shotLoader.shots.count;
+    if (_shotLoader.hasMorePages)
+        count++;
+    return count;
+}
+
+- (float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row >= _shotLoader.shots.count)
+        return 54.0f;
+    return self.tableView.rowHeight;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    ShotCell* cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    if (indexPath.row >= _shotLoader.shots.count)
+        return [tableView dequeueReusableCellWithIdentifier:@"loading_cell" forIndexPath:indexPath];
     
-    Shot* shot = [_items objectAtIndex:indexPath.row];
-    cell.shot = shot;
-    
+    ShotCell* cell = [tableView dequeueReusableCellWithIdentifier:@"shot_cell" forIndexPath:indexPath];
+    cell.shot = [_shotLoader.shots objectAtIndex:indexPath.row];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([cell.reuseIdentifier isEqualToString:@"loading_cell"]) {
+        [_shotLoader fetchNextPageWithCompletion:^(BOOL error) {
+            [self.tableView reloadData];
+        }];
+    }
 }
 
 @end
