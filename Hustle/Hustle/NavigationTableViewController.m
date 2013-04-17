@@ -36,9 +36,9 @@
         case 2:
             [self navigateToFeed:kFeedType_Debuts];
             break;
-        case 3:
-            [self navigateToFeed:kFeedType_Playoffs];
-            break;
+//        case 3:
+//            [self navigateToFeed:kFeedType_Playoffs];
+//            break;
         default:
             break;
     }
@@ -61,9 +61,9 @@
         case kFeedType_Debuts:
             titleImage = [UIImage imageNamed:@"title_debuts"];
             break;
-        case kFeedType_Playoffs:
-            titleImage = [UIImage imageNamed:@"title_playoffs"];
-            break;
+//        case kFeedType_Playoffs:
+//            titleImage = [UIImage imageNamed:@"title_playoffs"];
+//            break;
         default:
             break;
     }

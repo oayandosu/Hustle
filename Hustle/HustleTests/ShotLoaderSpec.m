@@ -6,7 +6,7 @@
 SPEC_BEGIN(ShotLoaderSpec)
 
 describe(@"ShotLoader", ^{
-    context(@"loading a feed", ^{
+    context(@"Popular feed", ^{
         __block ShotLoader* shotLoader;
         __block NSArray* shots;
         beforeAll(^{
@@ -34,6 +34,48 @@ describe(@"ShotLoader", ^{
             [[expectFutureValue(((Shot*)[shots objectAtIndex:0]).reboundsCount) shouldEventually] beNonNil];
             [[expectFutureValue(((Shot*)[shots objectAtIndex:0]).player_name) shouldEventually] beNonNil];
             [[expectFutureValue(((Shot*)[shots objectAtIndex:0]).player_avatar_url) shouldEventually] beNonNil];
+        });
+    });
+    
+    context(@"Everyone feed", ^{
+        __block ShotLoader* shotLoader;
+        __block NSArray* shots;
+        beforeAll(^{
+            shotLoader = [[ShotLoader alloc] initWithType:kFeedType_Everyone];
+            [shotLoader loadDataWithCompletion:^(BOOL error, NSArray *items) {
+                shots = items;
+            }];
+        });
+        
+        it(@"should not be nil", ^{
+            [shotLoader shouldNotBeNil];
+        });
+        
+        it(@"should have Shots in the response", ^{
+            [[expectFutureValue(shots) shouldEventually] beNonNil];
+            [[expectFutureValue(theValue([shots count])) shouldEventually] beGreaterThan:theValue(0)];
+            [[expectFutureValue([shots objectAtIndex:0]) shouldEventually] beKindOfClass:[Shot class]];
+        });
+    });
+    
+    context(@"Debuts feed", ^{
+        __block ShotLoader* shotLoader;
+        __block NSArray* shots;
+        beforeAll(^{
+            shotLoader = [[ShotLoader alloc] initWithType:kFeedType_Debuts];
+            [shotLoader loadDataWithCompletion:^(BOOL error, NSArray *items) {
+                shots = items;
+            }];
+        });
+        
+        it(@"should not be nil", ^{
+            [shotLoader shouldNotBeNil];
+        });
+        
+        it(@"should have Shots in the response", ^{
+            [[expectFutureValue(shots) shouldEventually] beNonNil];
+            [[expectFutureValue(theValue([shots count])) shouldEventually] beGreaterThan:theValue(0)];
+            [[expectFutureValue([shots objectAtIndex:0]) shouldEventually] beKindOfClass:[Shot class]];
         });
     });
 });
