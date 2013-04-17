@@ -1,6 +1,7 @@
 #import "FeedTableViewController.h"
 #import "IIViewDeckController.h"
 #import "Shot.h"
+#import "ShotCell.h"
 #import "SVProgressHUD.h"
 
 
@@ -53,10 +54,10 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    ShotCell* cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
     Shot* shot = [_items objectAtIndex:indexPath.row];
-//    cell.textLabel.text = shot.title;
+    cell.shot = shot;
     
     return cell;
 }

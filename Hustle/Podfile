@@ -4,6 +4,7 @@ pod 'ViewDeck'
 pod 'AFNetworking'
 pod 'SSPullToRefresh'
 pod 'SVProgressHUD'
+pod 'SDWebImage'
 
 target :HustleTests, :exclusive => true do
    pod 'Kiwi'
