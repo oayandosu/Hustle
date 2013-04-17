@@ -11,7 +11,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // auto-navigato to the default row/item
+    // auto-navigate to the default row/item
     _selectedNavIndex = kStartingNavItem;
     [self performNavigationToIndex:_selectedNavIndex];
 }
@@ -36,9 +36,6 @@
         case 2:
             [self navigateToFeed:kFeedType_Debuts];
             break;
-//        case 3:
-//            [self navigateToFeed:kFeedType_Playoffs];
-//            break;
         default:
             break;
     }
@@ -61,9 +58,6 @@
         case kFeedType_Debuts:
             titleImage = [UIImage imageNamed:@"title_debuts"];
             break;
-//        case kFeedType_Playoffs:
-//            titleImage = [UIImage imageNamed:@"title_playoffs"];
-//            break;
         default:
             break;
     }
