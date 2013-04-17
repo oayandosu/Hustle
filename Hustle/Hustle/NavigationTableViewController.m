@@ -11,6 +11,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // Set the background texture - sadly can't do this in the storyboard
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed: @"nav_background"]];
+    
     // auto-navigate to the default row/item
     _selectedNavIndex = kStartingNavItem;
     [self performNavigationToIndex:_selectedNavIndex];
@@ -22,6 +25,15 @@
     [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForItem:_selectedNavIndex inSection:0]
                                 animated:NO
                           scrollPosition:UITableViewScrollPositionTop];
+}
+
+#pragma mark -
+- (float)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return 3.0f;
+}
+
+- (UIView*)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"row_border"]];
 }
 
 #pragma mark - Navigation
